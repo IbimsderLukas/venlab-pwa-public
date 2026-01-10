@@ -5,14 +5,6 @@ Progressive Web Application für Labor-Datenmanagement.
 ![Coverage](.github/badges/jacoco.svg)
 ![Branches](.github/badges/branches.svg)
 
-## Features
-
-- ✅ **PWA Konfiguration** - Installierbar, Offline-fähig, Vollbild-Modus
-- ✅ **Einfacher Login** - Demo-Benutzer mit verschiedenen Rollen
-- ✅ **Dark/Light Theme** - Umschaltbar mit persistenter Einstellung
-- ✅ **Spaltenauswahl** - Konfigurierbare Tabellenspalten pro View
-- ✅ **CI/CD Pipeline** - GitHub Actions mit JaCoCo Testreports
-
 ## Voraussetzungen
 
 - Docker & Docker Compose
