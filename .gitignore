@@ -1,0 +1,47 @@
+# ===========================================
+# VenLab .gitignore
+# ===========================================
+
+# Environment - NIEMALS committen!
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+backup/
+
+# Build outputs
+dist/
+build/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test outputs
+coverage/
+cypress/videos/
+cypress/screenshots/
+
+# Gradle
+.gradle/
+
+# PWA development
+dev-dist/
+
+# Temporary files
+*.tmp
+*.temp

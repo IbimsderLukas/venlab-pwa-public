@@ -1,0 +1,54 @@
+# DigitalOcean App Platform Specification
+# Deployment Guide: https://docs.digitalocean.com/products/app-platform/
+
+name: venlab-pwa
+
+services:
+  # Frontend
+  - name: frontend
+    source_dir: /frontend
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: <your-github-username>/<your-repo-name>
+    build_command: npm run build
+    run_command: npx serve -s dist -l 8080
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
+    envs:
+      - key: NODE_ENV
+        value: production
+
+  # Backend
+  - name: backend
+    source_dir: /libs/vue-crud/libs/vue-datatable/libs/backend
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: <your-github-username>/<your-repo-name>
+    dockerfile_path: Dockerfile
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /api
+    envs:
+      - key: SPRING_DATASOURCE_URL
+        scope: RUN_TIME
+        value: ${db.DATABASE_URL}
+      - key: SPRING_DATASOURCE_USERNAME
+        scope: RUN_TIME
+        value: ${db.USERNAME}
+      - key: SPRING_DATASOURCE_PASSWORD
+        scope: RUN_TIME
+        value: ${db.PASSWORD}
+
+databases:
+  - name: db
+    engine: PG
+    version: "13"
+    size: db-s-dev-database
+    num_nodes: 1
