@@ -7,7 +7,7 @@ services:
     github:
       branch: main
       deploy_on_push: true
-      repo: DEIN-USERNAME/venlab-pwa-public  # <-- ANPASSEN!
+      repo: IbimsderLukas/venlab-pwa-public  # <-- ANPASSEN!
     build_command: npm run build
     run_command: npx serve -s dist -l 8080
     http_port: 8080
@@ -25,7 +25,7 @@ services:
     github:
       branch: main
       deploy_on_push: true
-      repo: DEIN-USERNAME/venlab-pwa-public  # <-- ANPASSEN!
+      repo: IbimsderLukas/venlab-pwa-public  # <-- ANPASSEN!
     dockerfile_path: Dockerfile
     http_port: 8080
     instance_count: 1
