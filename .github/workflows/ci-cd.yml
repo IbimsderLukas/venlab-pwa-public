@@ -65,11 +65,13 @@ jobs:
       - name: Generate JaCoCo Coverage Badge
         id: jacoco
         uses: cicirello/jacoco-badge-generator@v2
+        if: success()
         with:
-          jacoco-csv-file: libs/vue-crud/libs/vue-datatable/libs/backend/build/reports/jacoco/test/jacocoTestReport.csv
-          badges-directory: .github/badges
-          generate-branches-badge: true
-          generate-summary: true
+         jacoco-csv-file: libs/vue-crud/libs/vue-datatable/libs/backend/build/reports/jacoco/test/jacocoTestReport.csv
+         badges-directory: .github/badges
+         generate-branches-badge: true
+         generate-summary: true
+         on-missing-report: quiet
 
       - name: Log Coverage Percentage
         run: |
