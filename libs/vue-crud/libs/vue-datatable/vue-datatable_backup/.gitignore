@@ -1,0 +1,90 @@
+# =============================================
+# .gitignore für Vue Datatable / Vue CRUD
+# =============================================
+
+# === IDE ===
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# === Gradle/Java Build ===
+.gradle/
+build/
+out/
+target/
+*.jar
+*.war
+*.class
+*.log
+
+# === Maven ===
+.mvn/
+mvnw
+mvnw.cmd
+
+# === Node.js / Frontend ===
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.npm/
+.pnpm-store/
+
+# === Backup Ordner (Datenbank-Dumps) ===
+backup/
+libs/backend/backup/
+libs/vue-datatable/backup/
+libs/vue-datatable/libs/backend/backup/
+
+# === Environment / Secrets ===
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+!.env.development
+
+# === OS ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Logs ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# === Test / Coverage ===
+coverage/
+.nyc_output/
+*.lcov
+
+# === Temp Files ===
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# === Package Locks (optional - manche Teams committen diese) ===
+# package-lock.json
+# yarn.lock
+
+# === Docker ===
+# Nicht ignorieren: docker-compose.yml, Dockerfile
+*.tar
+
+# === Caches ===
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
